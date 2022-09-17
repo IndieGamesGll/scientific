@@ -14,7 +14,7 @@ public class Score : MonoBehaviour
     {
         _testText.text = "Пройдено испытаний " + _result + " из 4";
         LoadData();
-        if (_result == 4)
+        if (_result >= 4)
         {
             _win.SetActive(true);
         }
@@ -24,8 +24,8 @@ public class Score : MonoBehaviour
         if (PlayerPrefs.HasKey("test"))
             _test = 1;
         else
-            _test++;
-        _testText.text = "Пройдено испытаний " + _test + " из 4";
+            _test=1;
+        //_testText.text = "Пройдено испытаний " + _test + " из 4";
 
     }
 
@@ -34,8 +34,8 @@ public class Score : MonoBehaviour
         if (PlayerPrefs.HasKey("test2"))
             _test2 = 1;
         else
-            _test2++;
-        _testText.text = "Пройдено испытаний " + _test2 + " из 4";
+            _test2=1;
+       // _testText.text = "Пройдено испытаний " + _test2 + " из 4";
 
     }
     public void AddScore3()
@@ -43,8 +43,8 @@ public class Score : MonoBehaviour
         if (PlayerPrefs.HasKey("test3"))
             _test3 = 1;
         else
-            _test3++;
-        _testText.text = "Пройдено испытаний " + _test3 + " из 4";
+            _test3=1;
+        //_testText.text = "Пройдено испытаний " + _test3 + " из 4";
 
     }
     public void AddScore4()
@@ -52,8 +52,8 @@ public class Score : MonoBehaviour
         if (PlayerPrefs.HasKey("test4"))
             _test4 = 1;
         else
-            _test4++;
-        _testText.text = "Пройдено испытаний " + _test4 + " из 4";
+            _test4=1;
+        //_testText.text = "Пройдено испытаний " + _test4 + " из 4";
 
     }
     public void LoadData()
@@ -62,9 +62,9 @@ public class Score : MonoBehaviour
         {
 
             _test = PlayerPrefs.GetInt("test");
-            _test = PlayerPrefs.GetInt("test2");
-            _test = PlayerPrefs.GetInt("test3");
-            _test = PlayerPrefs.GetInt("test4");
+            _test2 = PlayerPrefs.GetInt("test2");
+            _test3 = PlayerPrefs.GetInt("test3");
+            _test4 = PlayerPrefs.GetInt("test4");
             _result = PlayerPrefs.GetInt("test") + PlayerPrefs.GetInt("test2") + PlayerPrefs.GetInt("test3") + PlayerPrefs.GetInt("test4");
             _testText.text = "Пройдено испытаний " + _result + " из 4";
         }

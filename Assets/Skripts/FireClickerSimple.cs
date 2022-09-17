@@ -14,7 +14,6 @@ public class FireClickerSimple : MonoBehaviour
         _spark.GetComponent<ParticleSystem>();
     }
 
-
     void FixedUpdate()
     {
         if (!GameStoped)

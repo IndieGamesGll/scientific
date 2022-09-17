@@ -24,9 +24,9 @@ public class PlayerMove : MonoBehaviour
             //_xRotation = Mathf.Clamp(_xRotation, 10f, 30f);
             //_cameraTramsform.localEulerAngles = new Vector3(_xRotation, 0f, 0f);
 
-            //transform.Rotate(0, Input.GetAxis("Mouse X") * _rotationSencetivity, 0);
+            transform.Rotate(0, Input.GetAxis("Mouse X") * _rotationSencetivity, 0);
         }
-        transform.Rotate(0, Input.GetAxis("Mouse X") * _rotationSencetivity, 0);
+        //transform.Rotate(0, Input.GetAxis("Mouse X") * _rotationSencetivity, 0);
 
         if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
         {
