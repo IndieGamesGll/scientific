@@ -13,6 +13,10 @@ public class WaterCklickerWithTimer : MonoBehaviour
     [SerializeField] private GameObject _waterPlane;
     [SerializeField] private GameObject _waterParticle;
 
+    private void Start()
+    {
+        Time.timeScale = 1f;
+    }
     void Update()
     {
         if (!_timerStoped)

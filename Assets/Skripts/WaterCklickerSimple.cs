@@ -12,6 +12,10 @@ public class WaterCklickerSimple : MonoBehaviour
 
     private bool _gameStoped = false;
 
+    private void Start()
+    {
+        Time.timeScale = 1f;
+    }
     void FixedUpdate()
     {
         if (_waterPlane.transform.position.y >= 3.3)

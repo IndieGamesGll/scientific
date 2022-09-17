@@ -12,6 +12,7 @@ public class FireClickerSimple : MonoBehaviour
     {
         _fire.GetComponent<ParticleSystem>();
         _spark.GetComponent<ParticleSystem>();
+        Time.timeScale = 1f;
     }
 
     void FixedUpdate()
