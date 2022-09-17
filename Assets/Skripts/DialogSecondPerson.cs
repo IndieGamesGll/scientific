@@ -11,7 +11,7 @@ public class DialogSecondPerson : MonoBehaviour
     void Start()
     {
         Message[0] = "Огонь вот вот заполонит все";
-        Message[1] = "Скорее!";
+        Message[1] = "Помоги Скорее!";
         PanelDialog.SetActive(false);
     }
 
