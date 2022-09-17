@@ -28,7 +28,8 @@ public class PlayerMove : MonoBehaviour
         }
         //transform.Rotate(0, Input.GetAxis("Mouse X") * _rotationSencetivity, 0);
 
-        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D))
+        if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.D)
+            || Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
         {
             _isWalking = true;
 
@@ -49,13 +50,14 @@ public class PlayerMove : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D)
+            || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
         {
             _playerAudio.Play();
 
 
         }
-        if (Input.GetKeyUp(KeyCode.W))//|| Input.GetKeyUp(KeyCode.S)||Input.GetKeyUp(KeyCode.A)|| Input.GetKeyUp(KeyCode.D))
+        if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.UpArrow))//|| Input.GetKeyUp(KeyCode.S)||Input.GetKeyUp(KeyCode.A)|| Input.GetKeyUp(KeyCode.D))
         {
             _playerAudio.Stop();
         }
